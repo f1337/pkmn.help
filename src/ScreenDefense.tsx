@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useHistory } from "react-router-dom";
 import { Type, typesFromString } from "./data";
+import { LinkButton } from "./LinkButton";
 import * as Matchups from "./Matchups";
 import TypeSelector from "./TypeSelector";
 import { useScrollToFragment } from "./useScrollToFragment";
@@ -70,6 +71,13 @@ export default function ScreenDefense(props: DefenseProps) {
       </div>
       <div className="dib w-50-ns w-100 v-top pl3-ns">
         <hr className="dn-ns subtle-hr mv4" />
+        <div className="pt1 mw5 center tc mv3">
+          <LinkButton
+            to={`/pokedex${params}`}
+          >
+            Pokédex
+          </LinkButton>{" "}
+        </div>
         <Matchups.Defense type1={type1} type2={type2} />
       </div>
     </main>

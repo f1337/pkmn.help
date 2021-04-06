@@ -2,7 +2,7 @@ import classnames from "classnames";
 import matchSorter from "match-sorter";
 import * as React from "react";
 import { Link, useHistory } from "react-router-dom";
-import { Type } from "./data";
+import { Type, typesFromString } from "./data";
 import { getImage } from "./getImage";
 import Paginator from "./Paginator";
 import { AllPokemon, Pokemon } from "./pkmn";
@@ -112,12 +112,21 @@ export default function ScreenPokedex(props: DexProps) {
 
   const query = search.get("q") || "";
   const page = Number(search.get("page") || 1) - 1;
+  const [type1 = Type.NONE, type2 = Type.NONE] = typesFromString(
+    search.get("types") || ""
+  );
 
   const pkmn = React.useMemo(() => {
     const s = query.trim();
     if (/^[0-9]+$/.test(s)) {
       const number = Number(s);
       return AllPokemon.filter((p) => p.number === number);
+    }
+    if (type1 != Type.NONE) {
+      if (type2 != Type.NONE) {
+        return AllPokemon.filter((p) => p.types[0] === type1 && p.types[1] === type2);
+      }
+      return AllPokemon.filter((p) => p.types[0] === type1 && p.types.length === 1);
     }
     return matchSorter(AllPokemon, s, { keys: ["name", "number"] });
   }, [query]);

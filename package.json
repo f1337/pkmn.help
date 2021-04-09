@@ -17,15 +17,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wavebeem/pkmn.help.git"
+    "url": "git+https://github.com/f1337/pkmn.help.git"
   },
   "keywords": [],
   "author": "Brian Mock <brian@wavebeem.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wavebeem/pkmn.help/issues"
+    "url": "https://github.com/f1337/pkmn.help/issues"
   },
-  "homepage": "https://github.com/wavebeem/pkmn.help#readme",
+  "homepage": "https://f1337.github.io/pkmn.help/",
   "devDependencies": {
     "@types/classnames": "^2.2.10",
     "@types/enzyme": "^3.10.5",

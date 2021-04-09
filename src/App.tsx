@@ -37,7 +37,7 @@ export default function App() {
       <div className="flex-auto">
         <h1 className="f3-ns f4 tc relative white PokeballHeader">
           <Link
-            to="/"
+            to="./"
             className="no-underline white hover-white-90 DottedFocus"
           >
             Pokémon Type Calculator
@@ -54,28 +54,28 @@ export default function App() {
           <NavLink
             className={tabClass}
             activeClassName={tabClassActive}
-            to={`/offense${offenseParams}`}
+            to={`./offense${offenseParams}`}
           >
             Offense
           </NavLink>
           <NavLink
             className={tabClass}
             activeClassName={tabClassActive}
-            to={`/defense${defenseParams}`}
+            to={`./defense${defenseParams}`}
           >
             Defense
           </NavLink>
           <NavLink
             className={tabClass}
             activeClassName={tabClassActive}
-            to={`/pokedex${pokedexParams}`}
+            to={`./pokedex${pokedexParams}`}
           >
             Pokédex
           </NavLink>
           <NavLink
             className={tabClass}
             activeClassName={tabClassActive}
-            to="/info"
+            to="./info"
           >
             Info
           </NavLink>
@@ -100,7 +100,7 @@ export default function App() {
             )}
           />
           <Route path="/info" component={ScreenInfo} />
-          <Redirect to="/defense" />
+          <Redirect to="./defense" />
         </Switch>
       </div>
     </div>

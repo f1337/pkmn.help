@@ -69,7 +69,7 @@ function Monster(props: MonsterProps) {
         <div className="mv2 lh-copy">
           <Link
             className="underline fg-link OutlineFocus"
-            to={`/defense?${new URLSearchParams({
+            to={`./defense?${new URLSearchParams({
               types: props.pokemon.types.join(" "),
             })}#matchup-defense`}
             aria-label={`Defense for ${props.pokemon.name}`}

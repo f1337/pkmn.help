@@ -73,7 +73,7 @@ export default function ScreenDefense(props: DefenseProps) {
         <hr className="dn-ns subtle-hr mv4" />
         <div className="pt1 mw5 center tc mv3">
           <LinkButton
-            to={`/pokedex${params}`}
+            to={`./pokedex${params}`}
           >
             Pokédex
           </LinkButton>{" "}

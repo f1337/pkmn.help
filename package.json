@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/f1337/pkmn.help/issues"
   },
-  "homepage": "https://f1337.github.io/pkmn.help/",
+  "homepage": "https://f1337.github.io/pkmn.help",
   "devDependencies": {
     "@types/classnames": "^2.2.10",
     "@types/enzyme": "^3.10.5",

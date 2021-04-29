@@ -82,15 +82,15 @@ export default function App() {
         </nav>
         <Switch>
           <Route
-            path="/offense"
+            path="/pkmn.help/offense"
             render={() => <ScreenOffense setOffenseParams={setOffenseParams} />}
           />
           <Route
-            path="/defense"
+            path="/pkmn.help/defense"
             render={() => <ScreenDefense setDefenseParams={setDefenseParams} />}
           />
           <Route
-            path="/pokedex"
+            path="/pkmn.help/pokedex"
             render={() => (
               <React.Suspense
                 fallback={<div className="Spinner center mt4 f2" />}
@@ -99,7 +99,7 @@ export default function App() {
               </React.Suspense>
             )}
           />
-          <Route path="/info" component={ScreenInfo} />
+          <Route path="/pkmn.help/info" component={ScreenInfo} />
           <Redirect to="./defense" />
         </Switch>
       </div>
